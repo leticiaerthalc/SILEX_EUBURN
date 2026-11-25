@@ -11,7 +11,7 @@ within the [EUBurn](https://euburn.aeris-data.fr/) project.
 | File | Method | Description |
 |------|--------|-------------|
 | `SILEX_classification_v1.ods` | Manual | Version 1: all layers, expert-based |
-| `SILEX_classification_v2.ods` | Manual + K-Means | Version 2: the manual classification (unchanged from v1) plus the K-Means classification, which validates it and describes the in-plume moments more specifically |
+| `SILEX_classification_v2.ods` | Manual + K-Means | Version 2: the manual classification (unchanged from v1) plus the K-Means classification, which validates it and describes the in-plume moments more specifically. Sheets: `Flight details`, `Classification_V2` |
 
 Each file contains a "Flight details" page describing what was measured in the
 atmospheric layers of each flight.
@@ -69,6 +69,8 @@ moments of the plume are separated from the core of the plume).
 plumes along each flight (BC and altitude time series). Agreement is
 quantified with the adjusted Rand index (ARI) and a confusion matrix.
 
+The table below describes the K-Means clusters used to build the classification (context only; cluster numbers are not given in the files but are available upon request).
+
 **v2 clusters** ([mean / median] values per cluster)
 
 | Cluster | Description | 
@@ -80,14 +82,16 @@ quantified with the adjusted Rand index (ARI) and a confusion matrix.
 | C4 | Aged smoke (LRT) | 
 | C5 | Intense local plume |
 
-> **Not included:** the K-Means background clusters (C0, C1, C2) are not
-> distributed here; please contact the author to request them. Only the
-> in-plume clusters (**C3, C4 and C5**) are provided.
+> **Not included:** in V2 only the in-plume moments are provided, labelled
+> **Local Plume** or **LRT Plume** (LRT Plume corresponds to cluster C4; Local
+> Plume to clusters C3 and C5). Cluster numbers are not given in the files.
+> The K-Means background clusters (C0, C1, C2) are not distributed here;
+> please contact the author to request them.
 >
 > The manual classification is identical in v1 and v2. Flights 23, 28, 30 and
 > 31 have no K-Means result, because the method did not flag any plumes in
 > them; for these flights only the manual classification is available.
-
+> 
 **Abbreviations:** BC: black carbon · FF: fossil fuel · BB: biomass burning ·
 LRT: long-range transport · ARI: adjusted Rand index · LTO: landing and take-off
 
@@ -99,8 +103,7 @@ import pandas as pd  # requires: pip install odfpy
 path = "SILEX_classification_v2.ods"
 print(pd.ExcelFile(path, engine="odf").sheet_names)  # list the sheets
 
-df = pd.read_excel(path, sheet_name="[sheet name]", engine="odf")
-```
+df = pd.read_excel(path, sheet_name="Classification_V2", engine="odf")```
 
 ## Citation
 
@@ -132,5 +135,5 @@ Leticia Erthal Cordeiro – leticia.erthalcordeiro@meteo.fr – CNRM
 
 ## Changelog
 
-- **v2** (September 2026): added the K-Means classification (in-plume clusters C3–C5) and its cross-validation against the manual classification; the manual classification is unchanged
+- **v2** (September 2026): added the K-Means classification (in-plume moments, labelled Local Plume or LRT Plume) and its cross-validation against the manual classification; the manual classification is unchanged
 - **v1** (April 2026): initial release, manual classification
