@@ -3,7 +3,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24529089.svg)](https://doi.org/10.5281/zenodo.24529089)
 
 Flight-by-flight classification of the atmospheric layers sampled during all
-flights of the SILEX aircraft campaign ([dates, location, aircraft]), produced
+flights of the SILEX aircraft campaign (from July 15 to August 3, 2025 in France), produced
 within the [EUBurn](https://euburn.aeris-data.fr/) project.
 
 ## Files
@@ -83,9 +83,8 @@ The table below describes the K-Means clusters used to build the classification 
 | C5 | Intense local plume |
 
 > **Not included:** in V2 only the in-plume moments are provided, labelled
-> **Local Plume** or **LRT Plume** (LRT Plume corresponds to cluster C4; Local
-> Plume to clusters C3 and C5). Cluster numbers are not given in the files.
-> The K-Means background clusters (C0, C1, C2) are not distributed here;
+> **Local Plume** or **LRT Plume**. Cluster numbers are not given in the files.
+> The K-Means background are not distributed here;
 > please contact the author to request them.
 >
 > The manual classification is identical in v1 and v2. Flights 23, 28, 30 and
