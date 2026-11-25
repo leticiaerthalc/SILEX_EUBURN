@@ -9,6 +9,17 @@ Data products produced during my PhD thesis within the
 - **Thesis:** [Characterization of aerosols released by  wildfires in Europe and their regional climate impact ], [Université de Toulouse/MétéoFrance - CNRM], [2028]
 - **Author:** [Leticia ERTHAL CORDEIRO] ([https://orcid.org/0000-0001-8559-7851])
 
+## Citation
+
+If you use this dataset, please cite:
+
+> Erthal Cordeiro, L., Velazquez Garcia, A., & Denjean, C. (2026). SILEX atmospheric layer classification: flight-by-flight manual and K-Means (v2) (Version 2) [Dataset]. Zenodo. https://doi.org/10.5281/zenodo.24529089
+
+## License
+
+This work is licensed under [CC BY 4.0 / the variant in your LICENSE file].
+See [`LICENSE`](https://github.com/leticiaerthalc/SILEX_EUBURN/blob/main/LICENSE).
+
 ## Repository structure
 
 ```
