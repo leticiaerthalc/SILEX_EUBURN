@@ -31,20 +31,6 @@ More products will be added as separate folders.
 
 ## Product 1: Atmospheric Layer Classification
 
-Flight-by-flight classification of the atmospheric layers sampled during the
-SILEX campaign.
-
-**Campaign:** SILEX – [dates, location, aircraft, instruments]
-
-### Files
-
-| File | Description |
-|------|-------------|
-| `Atmospheric_Layer_Classification/SILEX_classification_v1.ods` | Version 1 |
-| `Atmospheric_Layer_Classification/SILEX_classification_v2.ods` | Version 2 (current) |
-
-## Product 1: Atmospheric Layer Classification
-
 Flight-by-flight classification of the atmospheric layers sampled during all
 flights of the SILEX campaign ([dates, location, aircraft, instruments]).
 
